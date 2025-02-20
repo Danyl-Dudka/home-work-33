@@ -5,6 +5,7 @@
 .data > div {
   margin-top: 20px;
   cursor: pointer;
+  width: -moz-fit-content;
   width: fit-content;
   font-family: "KumarOne-Regular", sans-serif;
 }

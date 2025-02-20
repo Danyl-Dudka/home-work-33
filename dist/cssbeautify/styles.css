@@ -3,6 +3,13 @@
     src: url("/fonts/KumarOne-Regular.ttf");
 }
 
+.data > div {
+    margin-top: 20px;
+    cursor: pointer;
+    width: fit-content;
+    font-family: "KumarOne-Regular", sans-serif;
+}
+
 body {
     background-image: url(/images/body_logo.jpg);
     background-repeat: no-repeat;
@@ -93,14 +100,6 @@ button:hover {
     margin-left: 84px;
 }
 
-.data > div {
-    margin-top: 20px;
-    cursor: pointer;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-family: "KumarOne-Regular", sans-serif;
-}
-
 .data > div:hover {
     color: red;
 }
@@ -136,4 +135,3 @@ button:hover {
 .btn-secondary {
     background-color: #222 !important;
 }
-/*# sourceMappingURL=styles.css.map */
