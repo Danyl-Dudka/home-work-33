@@ -1,11 +1,13 @@
-const gulp = require('gulp');
-const sass = require('sass');
-const gulpSass = require('gulp-sass')(require('sass'));
-const browserSync = require('browser-sync').create();
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const beautify = require('gulp-cssbeautify');
-const minify = require('gulp-csso');
+import gulp from 'gulp';
+import * as sass from 'sass';
+import gulpSass from 'gulp-sass';
+import browserSync from 'browser-sync';
+import postcss from 'gulp-postcss';
+import beautify from 'gulp-cssbeautify';
+import minify from 'gulp-csso';
+import autoprefixer from 'gulp-autoprefixer';
+
+const sassCompiler = gulpSass(sass);
 
 const PATH = {
     BUILD_FOLDER: './dist/',
@@ -25,7 +27,7 @@ gulp.task('default', gulp.series(scssTask, autoprefix, cssBeautify, minifyFuncti
 // забезпечуючи більш гнучкий та ефективний процес створення стилів.
 async function scssTask() {
     return gulp.src(PATH.SCSS_FOLDER)
-        .pipe(gulpSass())
+        .pipe(sassCompiler())
         .pipe(gulp.dest(PATH.CSS_OUTPUT));
 }
 
